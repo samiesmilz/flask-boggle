@@ -8,8 +8,10 @@ app.config["SECRET_KEY"] = "mk7638"
 
 @app.route("/")
 def homepage():
-    session['board'] = session.get('board', boggle_game.make_board())
-    session["points"] = session.get('points', 0)
+    # session['board'] = session.get('board', boggle_game.make_board())
+    session['board'] = boggle_game.make_board()
+    session["points"] = 0
+
     return render_template("/index.html")
 
 
@@ -27,6 +29,6 @@ def check_guess():
             points = session["points"]
             return jsonify({"result": "Congrats - You got it right!", "points": points})
         else:
-            return jsonify({"result": "Your word is not on the board!"})
+            return jsonify({"result": "Your guess is not on the board!"})
 
     return jsonify({"result": "Not a word!"})

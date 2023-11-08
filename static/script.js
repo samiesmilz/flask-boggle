@@ -2,6 +2,8 @@
 // When the document is ready, listen for the submit event on the guess form
 $(document).ready(() => {
   $("#guess-form").submit(handleFormSubmission);
+  // Start the countdown
+  countdownInterval = setInterval(updateTimer, 1000);
 });
 
 async function handleFormSubmission(event) {
@@ -25,4 +27,18 @@ async function handleFormSubmission(event) {
   } catch (error) {
     console.error("Error:", error);
   }
+}
+
+let timeRemaining = 60;
+let countdownInterval;
+
+// Function to update the timer
+function updateTimer() {
+  $("#timer").text(timeRemaining);
+  if (timeRemaining <= 0) {
+    clearInterval(countdownInterval);
+    $("#guess-input").prop("disabled", true);
+    $("#submit-btn").attr("disabled", true);
+  }
+  timeRemaining--;
 }

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Play Boggle</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{url_for('static', filename='styles.css')}}"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="game-title-div">
+        <h1 id="game-title">Lets Play Boogle</h1>
+        <p id="subtitle">Find your next word.</p>
+      </div>
+      <div id="score-div">
+        <p id="score-notice">Current score : <span id="score-value">0</span></p>
+      </div>
+      <div id="gameboard-div">
+        {% for row in session.board %}
+        <div class="row">
+          {% for letter in row %}
+          <div class="cell">
+            <span class="letter">{{ letter }}</span>
+          </div>
+          {% endfor %}
+        </div>
+        {% endfor %}
+      </div>
+
+      <div id="guess-form-div">
+        <form action="" id="guess-form">
+          <label for="guess-input" class="guess">Enter your guess :</label>
+          <input
+            id="guess-input"
+            type="text"
+            name="guess-input"
+            class="guess"
+          />
+          <button class="guess" id="submit-btn">Submit</button>
+        </form>
+      </div>
+      <div id="result-div">
+        <p id="result-message" class="guess"></p>
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="static/script.js"></script>
+  </body>
+</html>

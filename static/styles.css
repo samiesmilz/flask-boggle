@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Fjalla+One&family=Inter:wght@200&family=Montserrat:wght@200&family=Press+Start+2P&family=Roboto+Condensed&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@400;500;600;700&family=Fjalla+One&family=Inter:wght@200&family=Montserrat:wght@200&family=Press+Start+2P&family=Roboto+Condensed&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(37, 36, 47);
+  color: white;
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+}
+.container {
+  display: grid;
+}
+.game-title-div {
+  display: grid;
+  padding: 15px;
+  margin: 10px;
+  font-family: "Press Start 2P", Arial, Helvetica, sans-serif;
+  text-align: center;
+  justify-items: center;
+}
+
+#game-title {
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+
+#subtitle {
+  background-color: black;
+  padding: 10px 125px;
+  color: aquamarine;
+  font-family: "Archivo Narrow", Arial, Helvetica, sans-serif;
+  margin-top: 25px;
+  font-size: 1.5rem;
+}
+
+#gameboard-div {
+  display: grid;
+  grid-template-columns: repeat(5, 80px);
+  margin: 0 auto;
+  margin: 10px;
+  text-align: center;
+  justify-self: center;
+}
+
+.cell {
+  border: 2px solid #000;
+  padding: 10px;
+  font-size: 2.5rem;
+  text-align: center;
+  background-color: #222; /* Background color for each cell */
+  color: white; /* Text color for each cell */
+}
+
+.cell:hover {
+  background-color: #7fffd4c5;
+  color: #222;
+}
+
+#guess-form-div {
+  display: grid;
+  background-color: aquamarine;
+  color: #222;
+  justify-items: center;
+  width: max-content;
+  justify-self: center;
+  padding: 15px;
+}
+
+.guess {
+  padding: 5px;
+  font-size: 1rem;
+  border-radius: 5px;
+}
+
+#guess-input {
+  outline-color: aquamarine;
+}
+
+#result-div {
+  display: grid;
+  justify-self: center;
+  width: 100%;
+}
+#result-message {
+  text-align: center;
+  background-color: #222;
+  color: aquamarine;
+  width: 100%;
+  margin: 25px;
+  padding: 15px 25px;
+  align-self: center;
+  justify-self: center;
+}
+
+#score-div {
+  text-align: center;
+  justify-items: center;
+  background-color: aquamarine;
+  color: #222;
+  width: max-content;
+  justify-self: center;
+  padding: 15px 140px;
+}
+.spelled {
+  background-color: yellow;
+}

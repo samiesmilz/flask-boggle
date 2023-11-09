@@ -109,23 +109,6 @@ body {
   outline-color: aquamarine;
 }
 
-#result-div {
-  display: grid;
-  justify-self: center;
-  width: 100%;
-}
-#result-message {
-  text-align: center;
-  background-color: #222;
-  color: aquamarine;
-  width: 100%;
-  margin: 25px;
-  padding: 15px 25px;
-  align-self: center;
-  justify-self: center;
-  width: 450px;
-}
-
 #score-div {
   text-align: center;
   justify-items: center;
@@ -145,4 +128,31 @@ body {
 }
 #timer {
   color: yellow;
+}
+
+#hint-div {
+  width: 435px;
+  background-color: #000;
+  justify-self: center;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+#hint-btn {
+  align-self: start;
+  width: 100px;
+}
+#result-message {
+  display: inline;
+  text-align: center;
+  padding: 0px 25px;
+  color: yellow;
+  background-color: #111111;
+}
+
+.hinted-cell {
+  background-color: #7fffd4bf;
+}
+
+.correct-guess {
+  background-color: rg#79f079e8;
 }

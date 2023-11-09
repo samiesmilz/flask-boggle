@@ -30,16 +30,20 @@
       </fieldset>
 
       <div id="gameboard-div">
-        {% for row in session.board %}
+    {% for row in session.board %}
         <div class="row">
-          {% for letter in row %}
-          <div class="cell">
-            <span class="letter">{{ letter }}</span>
-          </div>
-          {% endfor %}
+            {% for letter in row %}
+                {% if letter in session.guessed_words %}
+                    <div class="cell guessed-word">
+                {% else %}
+                    <div class="cell">
+                {% endif %}
+                    <span class="letter">{{ letter }}</span>
+                </div>
+            {% endfor %}
         </div>
-        {% endfor %}
-      </div>
+    {% endfor %}
+</div>
 
       <div id="guess-form-div">
         <form action="" id="guess-form">
@@ -53,7 +57,8 @@
           <button class="guess" id="submit-btn">Submit</button>
         </form>
       </div>
-      <div id="result-div">
+      <div id="hint-div">
+        <button class="guess" id="hint-btn">Hint</button>
         <p id="result-message" class="guess"></p>
       </div>
     </div>

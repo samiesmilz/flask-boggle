@@ -29,6 +29,8 @@ class Boggle():
 
         return board
 
+    # Update the check_valid_word function in boggle.py
+
     def check_valid_word(self, board, word):
         """Check if a word is a valid word in the dictionary and/or the boggle board"""
 
@@ -55,7 +57,7 @@ class Boggle():
 
         # Base case: this isn't the letter we're looking for.
 
-        if board[y][x] != word[0]:
+        if 0 <= y < len(board) and 0 <= x < len(board[y]) and board[y][x] != word[0]:
             return False
 
         # Base case: we've used this letter before in this current path

@@ -39,6 +39,22 @@ function updateTimer() {
     clearInterval(countdownInterval);
     $("#guess-input").prop("disabled", true);
     $("#submit-btn").attr("disabled", true);
+    submitScore();
   }
   timeRemaining--;
+}
+
+async function submitScore() {
+  const score = $("#score-value").text();
+  console.log(score);
+  try {
+    const res = await axios.post("/post-score", { score });
+    const highestScore = res.data.score;
+    const numOfPlays = res.data.no_of_plays;
+    $("#highest-score-span").text(
+      highestScore + " - Number of plays : " + numOfPlays
+    );
+  } catch (error) {
+    console.error("Error:", error);
+  }
 }

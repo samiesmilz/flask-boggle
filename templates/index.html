@@ -18,9 +18,17 @@
           Find your next word in <span id="timer">60</span> seconds
         </p>
       </div>
-      <div id="score-div">
-        <p id="score-notice">Current score : <span id="score-value">0</span></p>
-      </div>
+      <fieldset id="score-fieldset">
+        <legend id="highest-score-legend">
+          Highest Score : <span id="highest-score-span">{{session.score}}</span>
+        </legend>
+        <div id="score-div">
+          <p id="score-notice">
+            Current score : <span id="score-value">0</span>
+          </p>
+        </div>
+      </fieldset>
+
       <div id="gameboard-div">
         {% for row in session.board %}
         <div class="row">

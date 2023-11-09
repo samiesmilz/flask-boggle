@@ -1,3 +1,4 @@
+<img width="1672" alt="Boggle Game Preview" src="/preview.png">
 # Boggle Game
 
 ## Overview

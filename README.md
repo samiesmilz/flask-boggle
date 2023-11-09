@@ -1,9 +1,11 @@
-````markdown
 # Boggle Game
 
 ## Overview
 
-Boggle is a word game where players attempt to find words in sequences of adjacent letters on a rectangular grid of lettered dice. This web application allows users to play the Boggle game online.
+Boggle is a word game where players attempt to find words in sequences
+
+- of adjacent letters on a rectangular grid of lettered dice.
+- This web application allows users to play the Boggle game online.
 
 ## Features
 
@@ -27,7 +29,6 @@ Boggle is a word game where players attempt to find words in sequences of adjace
    ```bash
    git clone https://github.com/samiesmilz/flask-boggle.git
    ```
-````
 
 2. Install dependencies:
 
@@ -73,7 +74,3 @@ This project is licensed under the [MIT License](LICENSE).
 
 Feel free to contribute or report issues.
 Happy playing!
-
-```
-
-```
